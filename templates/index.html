@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <!-- Phone Listings -->
+    <div class="row" id="craiglist-listings">
+      <div class="col-md-12">
+        <ul style="list-style: none;">
+            <h4 class ="heading">Latest Mars News Title</h4>
+            <li>{{scrp["Latest_Mars_News"][0]}}</li>
+            <h4 class ="heading">Featured Mars Article</h4>
+            <li>{{scrp["Latest_Mars_News"][1]}}</li>           
+        </ul>
+        <h4 class ="heading">Featured Mars Image</h4>
+        <img src="{{scrp['Featured_Mars_Image']}}", alt="Featured Mars Image">
+    <h4 class ="heading">Cerberus Hemisphere</h4>
+    <img src="{{scrp['Mars_Hemispheres'][0]['img_url']}}", alt="Cerberus Hemisphere">
+    <h4 class ="heading">Schiaparelli Hemisphere</h4>
+    <img src="{{scrp['Mars_Hemispheres'][1]['img_url']}}", alt="Schiaparelli Hemisphere">
+    <h4 class ="heading">Syrtis Major Hemisphere</h4>
+    <img src="{{scrp['Mars_Hemispheres'][2]['img_url']}}", alt="Syrtis Major Hemisphere">
+    <h4 class ="heading">Valles Marineris Hemisphere</h4>
+    <img src="{{scrp['Mars_Hemispheres'][3]['img_url']}}", alt="Valles Marineris Hemisphere">
+    <h4 class ="heading">Mars Facts</h4>   
+    <li>{{scrp["Mars_Facts"]}}</li> 
+    
+    
+       
+        </div>
+        <small></small>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
